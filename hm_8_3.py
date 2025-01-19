@@ -1,10 +1,6 @@
 def find_unique_value(list):
-  unique_list = []
-  for item in list:
-      if item in unique_list:
-        continue
-      else:
-        unique_list.append(item)
-  return unique_list[0]
+  for num in list:
+    if list.count(num) == 1:
+      return num
 
-print(find_unique_value([1,2,3,4,5,5,2]))
+print(find_unique_value([8, 8,1,1,2,2,3,3,4,5,5,2]))
